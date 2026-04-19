@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const VISION_API_KEY = "AIzaSyA9QB56BMHjkGva8v-6pZwftyPLbNAC8io";
+const VISION_API_KEY = "AIzaSyCEkT7JAkYTlkTlBgHu4C-Jkj03KdqFguo";
 const VISION_API_URL = `https://vision.googleapis.com/v1/images:annotate?key=${VISION_API_KEY}`;
 
 export interface VisionResponse {
@@ -51,9 +51,8 @@ export const analyzeFoodImage = async (
         error.response?.data?.error?.message || error.message
       );
       throw new Error(
-        `Vision API Error: ${
-          error.response?.data?.error?.message ||
-          "Check your API Key and Google Cloud billing settings."
+        `Vision API Error: ${error.response?.data?.error?.message ||
+        "Check your API Key and Google Cloud billing settings."
         }`
       );
     }

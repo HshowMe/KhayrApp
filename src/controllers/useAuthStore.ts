@@ -28,7 +28,7 @@ export const useAuthStore = create<AuthState>(set => ({
       const uid = userCredential.user.uid;
 
       let status = 'approved';
-      if (role === 'charity') {
+      if (role === 'charity' || role === 'volunteer') {
         status = 'pending_approval';
       }
 
@@ -48,7 +48,7 @@ export const useAuthStore = create<AuthState>(set => ({
       if (status === 'pending_approval') {
         await auth().signOut();
         set({isLoading: false});
-        throw new Error('Charity account created! Pending admin approval.');
+        throw new Error('Account created! Pending admin approval.');
       }
 
       const user: User = newUserData as User;
@@ -78,7 +78,7 @@ export const useAuthStore = create<AuthState>(set => ({
       if (userData.isSuspended) {
         throw new Error('Account suspended by administrator.');
       }
-      if (userData.role === 'charity' && userData.status === 'pending_approval') {
+      if ((userData.role === 'charity' || userData.role === 'volunteer') && userData.status === 'pending_approval') {
         throw new Error('Account is pending admin approval.');
       }
 

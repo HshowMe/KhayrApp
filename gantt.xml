@@ -1,0 +1,98 @@
+<mxGraphModel dx="1600" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="850" math="0" shadow="0">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+
+    <!-- Title -->
+    <mxCell id="title" value="Khayr Application Development Timeline" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1" vertex="1" parent="1">
+      <mxGeometry x="400" y="20" width="600" height="40" as="geometry" />
+    </mxCell>
+
+    <!-- Phase 1: Planning -->
+    <mxCell id="phase1" value="Phase 1: Planning &amp; UI" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="50" y="100" width="180" height="110" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="t1" value="Requirements Gathering (Jan 1-14)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="250" y="100" width="140" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="t2" value="UI/UX Wireframing (Jan 15-28)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="390" y="160" width="140" height="40" as="geometry" />
+    </mxCell>
+
+    <!-- Phase 2: Core Dev -->
+    <mxCell id="phase2" value="Phase 2: Core Dev" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="50" y="220" width="180" height="110" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="t3" value="Frontend Setup (Jan 29-Feb 15)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+      <mxGeometry x="530" y="220" width="180" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="t4" value="Firebase &amp; Auth (Feb 16-28)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+      <mxGeometry x="710" y="280" width="130" height="40" as="geometry" />
+    </mxCell>
+
+    <!-- Phase 3: Advanced -->
+    <mxCell id="phase3" value="Phase 3: Advanced" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="50" y="340" width="180" height="110" as="geometry" />
+    </mxCell>
+
+    <mxCell id="t5" value="AI Vision / Logic (Mar 1-15)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+      <mxGeometry x="840" y="340" width="150" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="t6" value="Maps &amp; Routing (Mar 16-25)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+      <mxGeometry x="990" y="400" width="100" height="40" as="geometry" />
+    </mxCell>
+
+    <!-- Phase 4: Delivery -->
+    <mxCell id="phase4" value="Phase 4: Delivery" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="50" y="460" width="180" height="110" as="geometry" />
+    </mxCell>
+
+    <mxCell id="t7" value="QA &amp; Testing (Mar 26-Apr 5)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+      <mxGeometry x="1090" y="460" width="110" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="t8" value="Release &amp; Report (Apr 6-10)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="1200" y="520" width="100" height="40" as="geometry" />
+    </mxCell>
+
+    <!-- Dependency Arrows (Sequential flow) -->
+    <mxCell id="edge1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="t1" target="t2">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="edge2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="t2" target="t3">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="530" y="180" />
+          <mxPoint x="530" y="240" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="edge3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="t3" target="t4">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="edge4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="t4" target="t5">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="840" y="300" />
+          <mxPoint x="840" y="360" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="edge5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="t5" target="t6">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="edge6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="t6" target="t7">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="1090" y="420" />
+          <mxPoint x="1090" y="480" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="edge7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="t7" target="t8">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+  </root>
+</mxGraphModel>

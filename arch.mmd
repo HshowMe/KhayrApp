@@ -1,0 +1,33 @@
+graph TD
+    subgraph UI Layer [Views: React Native components]
+        DonorUI[Donor App]
+        CharityUI[Charity Dashboard]
+        VolunteerUI[Volunteer Hub]
+    end
+
+    subgraph State Layer [Controllers: Zustand]
+        AuthStore[Auth Store]
+        DonationStore[Donation Store]
+        MapStore[Map Store]
+    end
+
+    subgraph Services [External APIs & Services]
+        Vision[Google Cloud Vision AI]
+        Maps[Google Maps / Geolocation]
+        Impact[Environmental Impact Service]
+    end
+
+    subgraph Backend [Firebase Cloud Services]
+        Firestore[(Firestore DB)]
+        Storage[Cloud Storage]
+        FCM[Push Notifications]
+    end
+
+    DonorUI --> |Dispatches| DonationStore
+    DonationStore --> |Query via Axios| Vision
+    DonationStore --> |Writes/Reads| Firestore
+    Firestore --> |Real-time Sync| CharityUI
+    CharityUI --> |Accepts & Triggers| Firestore
+    Firestore --> |Notifies| VolunteerUI
+    VolunteerUI --> |Fetches Route| Maps
+    Firestore --> |Updates Metrics| Impact

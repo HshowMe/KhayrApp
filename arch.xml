@@ -1,127 +1,134 @@
-<mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
-  <root>
-    <mxCell id="0" />
-    <mxCell id="1" parent="0" />
-    
-    <!-- UI Layer -->
-    <mxCell id="ui_layer" value="UI Layer (React Native)" style="swimlane;whiteSpace=wrap;html=1;startSize=23;" vertex="1" parent="1">
-      <mxGeometry x="40" y="40" width="180" height="340" as="geometry" />
-    </mxCell>
-    <mxCell id="2" value="Donor App" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="ui_layer">
-      <mxGeometry x="30" y="50" width="120" height="60" as="geometry" />
-    </mxCell>
-    <mxCell id="3" value="Charity Dashboard" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="ui_layer">
-      <mxGeometry x="30" y="150" width="120" height="60" as="geometry" />
-    </mxCell>
-    <mxCell id="4" value="Volunteer Hub" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="ui_layer">
-      <mxGeometry x="30" y="250" width="120" height="60" as="geometry" />
-    </mxCell>
-
-    <!-- State Layer -->
-    <mxCell id="state_layer" value="Controllers (Zustand)" style="swimlane;whiteSpace=wrap;html=1;startSize=23;" vertex="1" parent="1">
-      <mxGeometry x="280" y="40" width="180" height="340" as="geometry" />
-    </mxCell>
-    <mxCell id="5" value="Auth Store" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="state_layer">
-      <mxGeometry x="30" y="50" width="120" height="60" as="geometry" />
-    </mxCell>
-    <mxCell id="6" value="Donation Store" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="state_layer">
-      <mxGeometry x="30" y="150" width="120" height="60" as="geometry" />
-    </mxCell>
-    <mxCell id="7" value="Map Store" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="state_layer">
-      <mxGeometry x="30" y="250" width="120" height="60" as="geometry" />
-    </mxCell>
-
-    <!-- Backend Layer -->
-    <mxCell id="backend_layer" value="Backend (Firebase)" style="swimlane;whiteSpace=wrap;html=1;startSize=23;" vertex="1" parent="1">
-      <mxGeometry x="520" y="40" width="180" height="340" as="geometry" />
-    </mxCell>
-    <mxCell id="8" value="Firestore DB" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="backend_layer">
-      <mxGeometry x="40" y="50" width="100" height="80" as="geometry" />
-    </mxCell>
-    <mxCell id="9" value="Cloud Storage" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="backend_layer">
-      <mxGeometry x="30" y="160" width="120" height="60" as="geometry" />
-    </mxCell>
-    <mxCell id="10" value="FCM Push" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="backend_layer">
-      <mxGeometry x="30" y="250" width="120" height="60" as="geometry" />
-    </mxCell>
-
-    <!-- Services Layer -->
-    <mxCell id="services_layer" value="External Services" style="swimlane;whiteSpace=wrap;html=1;startSize=23;" vertex="1" parent="1">
-      <mxGeometry x="780" y="40" width="200" height="340" as="geometry" />
-    </mxCell>
-    <mxCell id="11" value="Google Cloud Vision AI" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="services_layer">
-      <mxGeometry x="30" y="50" width="140" height="60" as="geometry" />
-    </mxCell>
-    <mxCell id="12" value="Google Maps Geolocation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="services_layer">
-      <mxGeometry x="30" y="150" width="140" height="60" as="geometry" />
-    </mxCell>
-    <mxCell id="13" value="Impact Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="services_layer">
-      <mxGeometry x="30" y="250" width="140" height="60" as="geometry" />
-    </mxCell>
-
-    <!-- Edges -->
-    <mxCell id="101" value="Dispatches" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="2" target="6">
-      <mxGeometry relative="1" as="geometry" />
-    </mxCell>
-    <mxCell id="102" value="Query via Axios" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="6" target="11">
-      <mxGeometry y="-10" relative="1" as="geometry">
-        <Array as="points">
-          <mxPoint x="490" y="220" />
-          <mxPoint x="490" y="120" />
-        </Array>
-        <mxPoint as="offset" />
-      </mxGeometry>
-    </mxCell>
-    <mxCell id="103" value="Writes/Reads" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="6" target="8">
-      <mxGeometry relative="1" as="geometry" />
-    </mxCell>
-    <mxCell id="104" value="Real-time Sync" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="8" target="3">
-      <mxGeometry y="20" relative="1" as="geometry">
-        <Array as="points">
-          <mxPoint x="610" y="150" />
-          <mxPoint x="200" y="150" />
-          <mxPoint x="200" y="220" />
-        </Array>
-        <mxPoint as="offset" />
-      </mxGeometry>
-    </mxCell>
-    <mxCell id="105" value="Accepts &amp; Triggers" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="3" target="8">
-      <mxGeometry y="-20" relative="1" as="geometry">
-        <Array as="points">
-          <mxPoint x="220" y="240" />
-          <mxPoint x="220" y="170" />
-          <mxPoint x="580" y="170" />
-        </Array>
-        <mxPoint as="offset" />
-      </mxGeometry>
-    </mxCell>
-    <mxCell id="106" value="Notifies" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="8" target="4">
-      <mxGeometry y="10" relative="1" as="geometry">
-        <Array as="points">
-          <mxPoint x="540" y="110" />
-          <mxPoint x="540" y="320" />
-        </Array>
-        <mxPoint as="offset" />
-      </mxGeometry>
-    </mxCell>
-    <mxCell id="107" value="Fetches Route" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="4" target="12">
-      <mxGeometry relative="1" as="geometry">
-        <Array as="points">
-          <mxPoint x="240" y="320" />
-          <mxPoint x="240" y="390" />
-          <mxPoint x="730" y="390" />
-          <mxPoint x="730" y="220" />
-        </Array>
-      </mxGeometry>
-    </mxCell>
-    <mxCell id="108" value="Updates Data" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="8" target="13">
-      <mxGeometry y="-10" relative="1" as="geometry">
-        <Array as="points">
-          <mxPoint x="630" y="130" />
-          <mxPoint x="630" y="320" />
-        </Array>
-        <mxPoint as="offset" />
-      </mxGeometry>
-    </mxCell>
-  </root>
-</mxGraphModel>
+<mxfile host="app.diagrams.net">
+  <diagram id="vK_C0ES0oW8NpK-hvonc" name="Page-1">
+    <mxGraphModel dx="808" dy="427" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ui_layer" parent="1" style="swimlane;whiteSpace=wrap;html=1;startSize=23;" value="UI Layer (React Native)" vertex="1">
+          <mxGeometry height="340" width="180" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="2" parent="ui_layer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Donor App" vertex="1">
+          <mxGeometry height="60" width="120" x="30" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="3" parent="ui_layer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Charity Dashboard" vertex="1">
+          <mxGeometry height="60" width="120" x="30" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="4" parent="ui_layer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Volunteer Hub" vertex="1">
+          <mxGeometry height="60" width="120" x="30" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="state_layer" parent="1" style="swimlane;whiteSpace=wrap;html=1;startSize=23;" value="Controllers (Zustand)" vertex="1">
+          <mxGeometry height="340" width="180" x="280" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="5" parent="state_layer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Auth Store" vertex="1">
+          <mxGeometry height="60" width="120" x="30" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="6" parent="state_layer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Donation Store" vertex="1">
+          <mxGeometry height="60" width="120" x="30" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="7" parent="state_layer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Map Store" vertex="1">
+          <mxGeometry height="60" width="120" x="30" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="backend_layer" parent="1" style="swimlane;whiteSpace=wrap;html=1;startSize=23;" value="Backend (Firebase)" vertex="1">
+          <mxGeometry height="340" width="180" x="520" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="8" parent="backend_layer" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#ffe6cc;strokeColor=#d79b00;" value="Firestore DB" vertex="1">
+          <mxGeometry height="80" width="100" x="40" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="9" parent="backend_layer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" value="Cloud Storage" vertex="1">
+          <mxGeometry height="60" width="120" x="30" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="10" parent="backend_layer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" value="FCM Push" vertex="1">
+          <mxGeometry height="60" width="120" x="30" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="services_layer" parent="1" style="swimlane;whiteSpace=wrap;html=1;startSize=23;" value="External Services" vertex="1">
+          <mxGeometry height="340" width="200" x="780" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="11" parent="services_layer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Google Cloud Vision AI" vertex="1">
+          <mxGeometry height="60" width="140" x="30" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="12" parent="services_layer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Google Maps Geolocation" vertex="1">
+          <mxGeometry height="60" width="140" x="30" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="13" parent="services_layer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Impact Service" vertex="1">
+          <mxGeometry height="60" width="140" x="30" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="101" edge="1" parent="1" source="2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="6" value="Dispatches">
+          <mxGeometry relative="1" x="-0.6" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="260" y="120" />
+              <mxPoint x="260" y="220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="102" edge="1" parent="1" source="6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="11" value="Query via Axios">
+          <mxGeometry relative="1" x="0.6522" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="490" y="200" />
+              <mxPoint x="490" y="80" />
+              <mxPoint x="880" y="80" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="103" edge="1" parent="1" source="6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="8" value="Writes/Reads">
+          <mxGeometry relative="1" x="-0.4783" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="530" y="220" />
+              <mxPoint x="530" y="130" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="104" edge="1" parent="1" source="8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="3" value="Real-time Sync">
+          <mxGeometry relative="1" x="-0.1818" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="200" y="160" />
+              <mxPoint x="200" y="220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="105" edge="1" parent="1" source="3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=1;entryDx=0;entryDy=-15;entryPerimeter=0;" target="8" value="Accepts &amp; Triggers">
+          <mxGeometry relative="1" x="0.0549" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="240" y="240" />
+              <mxPoint x="240" y="180" />
+              <mxPoint x="560" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="106" edge="1" parent="1" source="8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="4" value="Notifies">
+          <mxGeometry relative="1" x="0.2459" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="540" y="110" />
+              <mxPoint x="540" y="270" />
+              <mxPoint x="130" y="270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="107" edge="1" parent="1" source="4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="12" value="Fetches Route">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="240" y="340" />
+              <mxPoint x="240" y="390" />
+              <mxPoint x="730" y="390" />
+              <mxPoint x="730" y="220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="108" edge="1" parent="1" source="8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="13" value="Updates Data">
+          <mxGeometry relative="1" x="-0.4119" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="710" y="130" />
+              <mxPoint x="710" y="320" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

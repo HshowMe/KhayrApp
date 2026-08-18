@@ -1,9 +1,128 @@
-# OSX
-.DS_Store
-package-lock.json
+# ------------------------------------------------------------------------------
+# Secrets, Environment Variables & Sensitive Credentials
+# ------------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+*.env
+*.env.local
+*.env.development
+*.env.test
+*.env.production
 
-# Xcode
+# Service Account Keys, Firebase & Cloud Credentials
+google-services.json
+**/google-services.json
+GoogleService-Info.plist
+**/GoogleService-Info.plist
+service-account*.json
+firebase-adminsdk*.json
+*service-account*.json
+secrets.json
+credentials.json
+config.secret.json
+
+# Keystores & Signing Certificates
+*.keystore
+*.jks
+*.p12
+*.pfx
+*.pem
+*.key
+*.crt
+*.cer
+*.der
+android/app/debug.keystore
+android/app/release.keystore
+
+# Local properties & Developer overrides
+local.properties
+ios/.xcode.env.local
+
+# ------------------------------------------------------------------------------
+# Dependencies & Package Managers
+# ------------------------------------------------------------------------------
+node_modules/
+**/node_modules/
+vendor/bundle/
+
+# ------------------------------------------------------------------------------
+# Build Outputs, Compiled Files & Cache
+# ------------------------------------------------------------------------------
+# Generic build dirs
 build/
+**/build/
+dist/
+out/
+
+# Android build outputs
+android/.gradle/
+android/app/.cxx/
+android/app/build/
+android/captures/
+
+# iOS build outputs
+ios/Pods/
+ios/DerivedData/
+*.xcworkspace/
+!*.xcodeproj/project.xcworkspace
+
+# Metro & Bundle artifacts
+*.jsbundle
+.metro-health-check*
+
+# TypeScript compilation cache
+*.tsbuildinfo
+
+# Firebase Functions build output
+functions/lib/
+
+# ------------------------------------------------------------------------------
+# Archives, Zips & Temporary Files
+# ------------------------------------------------------------------------------
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+project.zip
+package-new.json
+*.bak
+*.tmp
+*.temp
+
+# ------------------------------------------------------------------------------
+# Logs & Testing
+# ------------------------------------------------------------------------------
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+coverage/
+/.nyc_output
+
+# ------------------------------------------------------------------------------
+# IDE, Editor & OS Files
+# ------------------------------------------------------------------------------
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# VS Code & IntelliJ / Android Studio
+.vscode/
+.idea/
+*.iml
+*.hprof
+
+# Xcode specific
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -12,70 +131,12 @@ build/
 !default.mode2v3
 *.perspectivev3
 !default.perspectivev3
-xcuserdata
+xcuserdata/
 *.xccheckout
 *.moved-aside
-DerivedData
-*.hmap
-*.ipa
 *.xcuserstate
-project.xcworkspace
-ios/.xcode.env.local
 
-# Android/IntelliJ
-build/
-.idea
-.gradle
-local.properties
-*.iml
-*.hprof
-.cxx/
-*.keystore
-!debug.keystore
-
-# Node
-node_modules/
-npm-debug.log
-yarn-error.log
-
-# fastlane
-**/fastlane/report.xml
-**/fastlane/Preview.html
-**/fastlane/screenshots
-**/fastlane/test_output
-
-# Bundle artifact
-*.jsbundle
-
-# Ruby / CocoaPods
-# /ios/Pods/
-/vendor/bundle/
-# Podfile.lock
-
-# Temporary files created by Metro
-.metro-health-check*
-
-# Environment variables
-.env
-.env.local
-.env.production
-
-# Testing
-/coverage
-
-# Expo (if using Expo)
+# Watchman & Expo
+.watchmanconfig
 .expo/
 .expo-shared/
-
-# TypeScript
-*.tsbuildinfo
-
-# VSCode
-.vscode/
-
-# Misc
-*.log
-*.swp
-*.swo
-*~
-.watchmanconfig

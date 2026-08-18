@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const VISION_API_KEY = "AIzaSyCEkT7JAkYTlkTlBgHu4C-Jkj03KdqFguo";
+const VISION_API_KEY = process.env.VISION_API_KEY || "";
 const VISION_API_URL = `https://vision.googleapis.com/v1/images:annotate?key=${VISION_API_KEY}`;
 
 export interface VisionResponse {

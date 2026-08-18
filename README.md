@@ -8,10 +8,7 @@ Khayr is a React Native mobile application for redistributing surplus food to lo
 - [System Architecture](#system-architecture)
 - [Tech Stack](#tech-stack)
 - [Project Structure](#project-structure)
-- [Setup and Installation](#setup-and-installation)
-- [Environment Variables](#environment-variables)
 - [Impact Calculation](#impact-calculation)
-- [License](#license)
 
 ## Features
 
